@@ -1,0 +1,60 @@
+/*hier komt jouw CSS die hoort bij App.jsx*/
+
+
+h1 {
+    font-size: 3em;
+    text-align: left;
+    margin-left: 0.1em;
+}
+
+h2 {
+    font-size: 1.5em;
+    text-align: left;
+    margin-left: 0.5em;
+}
+
+/* Wrapper die de 3 boxjes naast elkaar zet */
+.salesWrapper {
+    display: flex;
+    justify-content: left;
+    gap: 2em; /* ruimte tussen de boxjes */
+    margin: 3em 0.5em;
+    flex-wrap: wrap; /* zorgt dat ze onder elkaar komen op kleine schermen */
+}
+
+/* Basisstijl voor alle boxen */
+.salesOverview {
+    flex: 1;
+    max-width: 250px;
+    padding: 2em;
+    border: 2px solid;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Kleurvarianten */
+.salesOverview.sold {
+    border-color: green;
+    color: green;
+    background: rgba(122, 222, 166, 0.1);
+}
+
+.salesOverview.stock {
+    border-color: steelblue;
+    color: steelblue;
+    background: rgba(70, 130, 180, 0.1);
+}
+
+.salesOverview.toSell {
+    border-color: tomato;
+    color: tomato;
+    background: rgba(255, 99, 71, 0.1);
+}
+
+/* Het getal groter maken */
+.salesOverview div {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0.5em;
+}

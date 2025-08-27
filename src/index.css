@@ -1,3 +1,5 @@
+/*hier komt alle globale styling, die voor de gehele app geldt. (CSS reset, typografie, globale styling etc)npm run */
+
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;500&display=swap');
 
 :root {
