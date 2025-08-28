@@ -1,6 +1,6 @@
 import {inventory} from "../constants/inventory.js";
 
-function totalNumberOfSoldProducts() {
+function soldProducts() {
     const totalSold = inventory.reduce((acc, tv) => {
         return acc + tv.sold;
     }, 0);
@@ -8,4 +8,4 @@ function totalNumberOfSoldProducts() {
     return totalSold;
 }
 
-export default totalNumberOfSoldProducts;
+export default soldProducts;

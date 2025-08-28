@@ -1,7 +1,7 @@
 import './App.css';
-import totalNumberOfSoldProducts from "./helpers/totalNumberOfSoldProducts.js";
-import totalStockProduct from "./helpers/totalStockProduct.js";
-import totalProductsToSell from "./helpers/totalProductsToSell.js";
+import soldProducts from "./helpers/soldProducts.js";
+import productStock from "./helpers/productStock.js";
+import productsToSell from "./helpers/productsToSell.js";
 
 function App() {
     return (
@@ -18,17 +18,17 @@ function App() {
             <div className="salesWrapper">
                 <section className="salesOverview sold">
                     <p>Aantal verkochte producten</p>
-                    <div>{totalNumberOfSoldProducts()}</div>
+                    <div>{soldProducts()}</div>
                 </section>
 
                 <section className="salesOverview stock">
                     <p>Aantal ingekochte producten</p>
-                    <div>{totalStockProduct()}</div>
+                    <div>{productStock()}</div>
                 </section>
 
                 <section className="salesOverview toSell">
                     <p>Aantal te verkopen producten</p>
-                    <div>{totalProductsToSell()}</div>
+                    <div>{productsToSell()}</div>
                 </section>
             </div>
 
