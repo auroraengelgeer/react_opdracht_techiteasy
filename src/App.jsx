@@ -4,34 +4,39 @@ import totalStockProduct from "./helpers/totalStockProduct.js";
 import totalProductsToSell from "./helpers/totalProductsToSell.js";
 
 function App() {
-  return (
-      <main>
-        <h1>Tech it easy dashboard</h1>
+    return (
+        <main>
+            <header>
+                <h1>Tech it easy dashboard</h1>
+            </header>
 
-        <h2> Verkoopoverzicht </h2>
+            <body>
 
-        {/* Wrapper voor de 3 boxen */}
-        <div className="salesWrapper">
-          <section className="salesOverview sold">
-            <p>Aantal verkochte producten</p>
-            <div>{totalNumberOfSoldProducts()}</div>
-          </section>
+            <h2> Verkoopoverzicht </h2>
 
-          <section className="salesOverview stock">
-            <p>Aantal ingekochte producten</p>
-            <div>{totalStockProduct()}</div>
-          </section>
+            {/*Wrapper voor de 3 boxen */}
+            <div className="salesWrapper">
+                <section className="salesOverview sold">
+                    <p>Aantal verkochte producten</p>
+                    <div>{totalNumberOfSoldProducts()}</div>
+                </section>
 
-          <section className="salesOverview toSell">
-            <p>Aantal te verkopen producten</p>
-            <div>{totalProductsToSell()}</div>
-          </section>
-        </div>
+                <section className="salesOverview stock">
+                    <p>Aantal ingekochte producten</p>
+                    <div>{totalStockProduct()}</div>
+                </section>
 
-        <h2>Best verkochte tv</h2>
+                <section className="salesOverview toSell">
+                    <p>Aantal te verkopen producten</p>
+                    <div>{totalProductsToSell()}</div>
+                </section>
+            </div>
 
-      </main>
-  )
+            <h2>Best verkochte tv</h2>
+
+            </body>
+        </main>
+    )
 }
 
 export default App
