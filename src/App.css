@@ -62,6 +62,21 @@ h2 {
 .bestsellerWrapper {
     display: flex;
     justify-content: left;
-    gap: 1em;
+    padding: 0.5em;
+    margin: 1em 0.5em;
+    border: 3px dashed black;
+    color: grey;
+}
 
+.bestsellerOverview {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 3em;
+
+}
+
+.bestsellerTv {
+    display: flex;
+    flex-direction: column;
 }
