@@ -2,6 +2,9 @@ import './App.css';
 import soldProducts from "./helpers/soldProducts.js";
 import productStock from "./helpers/productStock.js";
 import productsToSell from "./helpers/productsToSell.js";
+import tvNameToString from "./helpers/tvNameToString.js";
+import {bestSellingTv} from "./constants/inventory.js";
+
 
 function App() {
     return (
@@ -10,7 +13,6 @@ function App() {
                 <h1>Tech it easy dashboard</h1>
             </header>
 
-            <body>
 
             <h2> Verkoopoverzicht </h2>
 
@@ -34,7 +36,16 @@ function App() {
 
             <h2>Best verkochte tv</h2>
 
-            </body>
+            <div className="bestsellerWrapper">
+                <section className="bestsellerOverview">
+                    <img src={bestSellingTv.sourceImg} alt={tvNameToString(bestSellingTv)}/>
+                    <div className="bestsellerTv">
+                        <p>{tvNameToString(bestSellingTv)}</p>
+                        <p>price</p>
+                        <p>sizes</p>
+                    </div>
+                </section>
+            </div>
         </main>
     )
 }

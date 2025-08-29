@@ -59,4 +59,9 @@ h2 {
     margin-top: 0.5em;
 }
 
+.bestsellerWrapper {
+    display: flex;
+    justify-content: left;
+    gap: 1em;
 
+}
