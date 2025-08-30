@@ -1,9 +1,99 @@
 import './App.css';
+import soldProducts from "./helpers/soldProducts.js";
+import productStock from "./helpers/productStock.js";
+import productsToSell from "./helpers/productsToSell.js";
+import tvNameToString from "./helpers/tvNameToString.js";
+import {bestSellingTv, inventory} from "./constants/inventory.js";
+import priceFormatter from "./helpers/priceFormatter.js";
+import screensizeFormatter from "./helpers/screensizeFormatter.js";
+import checkIcon from "./assets/check.png";
+import minusIcon from "./assets/minus.png";
+
 
 function App() {
-  return (
-    <h1>Begin hier met met maken van de applicatie!</h1>
-  )
+
+    function handleClickMostSoldFirst() {
+        console.log("Meest verkocht eerst")
+    }
+
+    function handleClickCheapestFirst() {
+        console.log("Goedkoopste eerst")
+    }
+
+    function handleClickBestForSportsFirst() {
+        console.log("Meest geschikt voor sport eerst")
+    }
+
+    return (
+        <main>
+            <header>
+                <h1>Tech it easy dashboard</h1>
+            </header>
+
+
+            <h2> Verkoopoverzicht </h2>
+
+            {/*Wrapper voor de 3 boxen */}
+            <div className="salesWrapper">
+                <section className="salesOverview sold">
+                    <p>Aantal verkochte producten</p>
+                    <div>{soldProducts()}</div>
+                </section>
+
+                <section className="salesOverview stock">
+                    <p>Aantal ingekochte producten</p>
+                    <div>{productStock()}</div>
+                </section>
+
+                <section className="salesOverview toSell">
+                    <p>Aantal te verkopen producten</p>
+                    <div>{productsToSell()}</div>
+                </section>
+            </div>
+
+            <h2>Best verkochte tv</h2>
+
+            <div className="bestsellerWrapper">
+                <section className="bestsellerOverview">
+                    <img src={bestSellingTv.sourceImg} alt={tvNameToString(bestSellingTv)}/>
+                    <div className="bestsellerTv">
+                        <p className="tvTitle">{tvNameToString(bestSellingTv)}</p>
+                        <p className="tvPrice">{priceFormatter(bestSellingTv)}</p>
+                        <p className="tvSize">{screensizeFormatter(bestSellingTv)}</p>
+                        <div className="features">
+                            <div className="feature">
+                                <img src={checkIcon} alt="+"/>
+                                <span>wifi</span>
+                            </div>
+                            <div className="feature">
+                                <img src={minusIcon} alt="-"/>
+                                <span>speech</span>
+                            </div>
+                            <div className="feature">
+                                <img src={checkIcon} alt="+"/>
+                                <span>hdr</span>
+                            </div>
+                            <div className="feature">
+                                <img src={checkIcon} alt="+"/>
+                                <span>bluetooth</span>
+                            </div>
+                            <div className="feature">
+                                <img src={minusIcon} alt="-"/>
+                                <span>ambilight</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+            <button type="button" onClick={handleClickMostSoldFirst}>Meest verkocht eerst</button>
+            <button type="button" onClick={handleClickCheapestFirst}>Goedkoopste eerst</button>
+            <button type="button" onClick={handleClickBestForSportsFirst}>Meest geschikt voor sport eerst</button>
+
+
+        </main>
+    )
 }
 
 export default App
