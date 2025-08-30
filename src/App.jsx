@@ -6,6 +6,8 @@ import tvNameToString from "./helpers/tvNameToString.js";
 import {bestSellingTv, inventory} from "./constants/inventory.js";
 import priceFormatter from "./helpers/priceFormatter.js";
 import screensizeFormatter from "./helpers/screensizeFormatter.js";
+import checkIcon from "./assets/check.png";
+import minusIcon from "./assets/minus.png";
 
 
 function App() {
@@ -45,6 +47,28 @@ function App() {
                         <p className="tvTitle">{tvNameToString(bestSellingTv)}</p>
                         <p className="tvPrice">{priceFormatter(bestSellingTv)}</p>
                         <p className="tvSize">{screensizeFormatter(bestSellingTv)}</p>
+                        <div className="features">
+                            <div className="feature">
+                                <img src={checkIcon} alt="+"/>
+                                <span>wifi</span>
+                            </div>
+                            <div className="feature">
+                                <img src={minusIcon} alt="-"/>
+                                <span>speech</span>
+                            </div>
+                            <div className="feature">
+                                <img src={checkIcon} alt="+"/>
+                                <span>hdr</span>
+                            </div>
+                            <div className="feature">
+                                <img src={checkIcon} alt="+"/>
+                                <span>bluetooth</span>
+                            </div>
+                            <div className="feature">
+                                <img src={minusIcon} alt="-"/>
+                                <span>ambilight</span>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
