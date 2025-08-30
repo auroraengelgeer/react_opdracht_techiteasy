@@ -3,8 +3,8 @@ import soldProducts from "./helpers/soldProducts.js";
 import productStock from "./helpers/productStock.js";
 import productsToSell from "./helpers/productsToSell.js";
 import tvNameToString from "./helpers/tvNameToString.js";
-import {bestSellingTv} from "./constants/inventory.js";
-
+import {bestSellingTv, inventory} from "./constants/inventory.js";
+import priceFormatter from "./helpers/priceFormatter.js";
 
 function App() {
     return (
@@ -41,7 +41,7 @@ function App() {
                     <img src={bestSellingTv.sourceImg} alt={tvNameToString(bestSellingTv)}/>
                     <div className="bestsellerTv">
                         <p>{tvNameToString(bestSellingTv)}</p>
-                        <p>price</p>
+                        <p>{priceFormatter(bestSellingTv)}</p>
                         <p>sizes</p>
                     </div>
                 </section>
