@@ -5,6 +5,8 @@ import productsToSell from "./helpers/productsToSell.js";
 import tvNameToString from "./helpers/tvNameToString.js";
 import {bestSellingTv, inventory} from "./constants/inventory.js";
 import priceFormatter from "./helpers/priceFormatter.js";
+import screensizeFormatter from "./helpers/screensizeFormatter.js";
+
 
 function App() {
     return (
@@ -42,7 +44,7 @@ function App() {
                     <div className="bestsellerTv">
                         <p className="tvTitle">{tvNameToString(bestSellingTv)}</p>
                         <p className="tvPrice">{priceFormatter(bestSellingTv)}</p>
-                        <p className="tvSize">sizes</p>
+                        <p className="tvSize">{screensizeFormatter(bestSellingTv)}</p>
                     </div>
                 </section>
             </div>
