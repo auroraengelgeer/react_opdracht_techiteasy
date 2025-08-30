@@ -40,9 +40,9 @@ function App() {
                 <section className="bestsellerOverview">
                     <img src={bestSellingTv.sourceImg} alt={tvNameToString(bestSellingTv)}/>
                     <div className="bestsellerTv">
-                        <p>{tvNameToString(bestSellingTv)}</p>
-                        <p>{priceFormatter(bestSellingTv)}</p>
-                        <p>sizes</p>
+                        <p className="tvTitle">{tvNameToString(bestSellingTv)}</p>
+                        <p className="tvPrice">{priceFormatter(bestSellingTv)}</p>
+                        <p className="tvSize">sizes</p>
                     </div>
                 </section>
             </div>
