@@ -11,6 +11,19 @@ import minusIcon from "./assets/minus.png";
 
 
 function App() {
+
+    function handleClickMostSoldFirst() {
+        console.log("Meest verkocht eerst")
+    }
+
+    function handleClickCheapestFirst() {
+        console.log("Goedkoopste eerst")
+    }
+
+    function handleClickBestForSportsFirst() {
+        console.log("Meest geschikt voor sport eerst")
+    }
+
     return (
         <main>
             <header>
@@ -72,6 +85,13 @@ function App() {
                     </div>
                 </section>
             </div>
+
+
+            <button type="button" onClick={handleClickMostSoldFirst}>Meest verkocht eerst</button>
+            <button type="button" onClick={handleClickCheapestFirst}>Goedkoopste eerst</button>
+            <button type="button" onClick={handleClickBestForSportsFirst}>Meest geschikt voor sport eerst</button>
+
+
         </main>
     )
 }
